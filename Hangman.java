@@ -46,6 +46,14 @@ public class Hangman {
     }
   }
 
+  /**
+   * Contains switch statements to determine the exact choice made by the user in the category of
+   * programming languages and contains a while loop to run the entire program till either the
+   * player looses or wins.
+   * 
+   * @param choice
+   */
+  
   private static void programLang(int choice) {
     String progLang = "";
     String userLet = "";
@@ -110,7 +118,16 @@ public class Hangman {
     }
 
   }
-
+  
+  
+  /**
+   * Contains switch statements to determine the exact choice made by the user in the category of
+   * movies and contains a while loop to run the entire program till either the
+   * player looses or wins.
+   * 
+   * @param choice
+   */
+  
   private static void movies(int choice) {
     String movies = "";
     String userLet = "";
@@ -177,7 +194,15 @@ public class Hangman {
     }
 
   }
-
+  
+  /**
+   * Contains switch statements to determine the exact choice made by the user in the category of
+   * fruits and contains a while loop to run the entire program till either the
+   * player looses or wins.
+   * 
+   * @param choice
+   */
+  
   private static void fruits(int choice) {
     String fruit = "";
     String userLet = "";
@@ -242,7 +267,15 @@ public class Hangman {
     }
 
   }
-
+  
+  /**
+   * Contains switch statements to determine the exact choice made by the user in the category of
+   * animals and contains a while loop to run the entire program till either the
+   * player looses or wins.
+   * 
+   * @param choice
+   */
+  
   private static void animals(int choice) {
     String animal = "";
     String userLet = "";
@@ -307,7 +340,15 @@ public class Hangman {
     }
 
   }
-
+  
+  /**
+   * Contains switch statements to determine the exact choice made by the user in the category of
+   * countries and contains a while loop to run the entire program till either the
+   * player looses or wins.
+   * 
+   * @param choice
+   */
+  
   private static void countries(int choice) {
     String countries = "";
     String userLet = "";
@@ -375,6 +416,16 @@ public class Hangman {
 
   }
   
+  /**
+   * Method that prints the word at each stage of the player's guess. Blank before any guesses 
+   * are made, and fills in a corresponding letter when a correct guess is made. 
+   * 
+   * @param word
+   * @param userLet
+   * @param currStr
+   * @return
+   */
+  
   private static String printWord(String word, String userLet, String currStr) {
     String retStr = currStr;
     int idx = 0;
@@ -411,6 +462,15 @@ public class Hangman {
 
 
   
+  /**
+   * Determines whether the guess just made by the player was correct or incorrect.
+   * 
+   * @param word
+   * @param userLet
+   * @param currStr
+   * @return true if valid, false otherwise
+   */
+  
   private static boolean valid(String word, String userLet, String currStr) {
     if (word.contains(userLet)) { // player guessed correct letter
       printWord(word, userLet, currStr);
@@ -420,6 +480,13 @@ public class Hangman {
     }
 
   }
+  
+  /**
+   * Draws the hangman in each step of the process. A step is incremented if valid() returns false
+   * 
+   * @param step
+   * @param word
+   */
   
   private static void draw(int step, String word) {
     System.out.println("The hangman is: ");
